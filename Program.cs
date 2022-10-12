@@ -62,13 +62,13 @@ public class GradeCounts
             val = Console.ReadLine();
             inVal = Convert.ToInt32(val);
 
-            if (inVal > 60)
+            if (inVal >= 60)
             {
                 // use shorthad to add to the count; this is the same as
                 // passCount = passCound + 1;
                 passCount += 1;
             }
-            else
+            else if (inVal != -1)
             {
                 failCount += 1;
             }
