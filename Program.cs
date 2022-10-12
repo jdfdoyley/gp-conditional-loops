@@ -58,7 +58,7 @@ public class GradeCounts
         // we account for it in the else-if statement
         do
         {
-            Console.WriteLine("Enter a grade between 0 and 100 (-1 to stop): ");
+            Console.Write("Enter a grade between 0 and 100 (-1 to stop): ");
             val = Console.ReadLine();
             inVal = Convert.ToInt32(val);
 
