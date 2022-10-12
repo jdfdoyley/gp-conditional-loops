@@ -45,10 +45,38 @@ public class GradeCounts
             inVal = Convert.ToInt32(val);
         }
 
-        // Print the pass and fail counts
+        // Print the pass and fail counts and a header for the do-wile loop
         Console.WriteLine("Count of passing grades: {0}", passCount);
         Console.WriteLine("Count of failing grades: {0}\n", failCount);
+        Console.WriteLine("Looping using a do-while loop:");
+        passCount = 0;
+        failCount = 0;
 
+        // loop as long as the input value is not -1; note that if the first
+        // value entered by the user is -1, the loop will still execute one
+        // so to make sure we don't include the loop controller in the count
+        // we account for it in the else-if statement
+        do
+        {
+            Console.WriteLine("Enter a grade between 0 and 100 (-1 to stop): ");
+            val = Console.ReadLine();
+            inVal = Convert.ToInt32(val);
+
+            if (inVal > 60)
+            {
+                // use shorthad to add to the count; this is the same as
+                // passCount = passCound + 1;
+                passCount += 1;
+            }
+            else
+            {
+                failCount += 1;
+            }
+        } while (inVal != -1);
+
+        // Print the pass and fail counts
+        Console.WriteLine("Count of passing grades: {0}", passCount);
+        Console.WriteLine("Count of failing grades: {0}", failCount);
     }
 }
 
